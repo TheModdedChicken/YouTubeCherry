@@ -1,4 +1,4 @@
-# YouTube Cherry
+# YouTube Cherry ![YouTube Cherry Icon](https://github.com/TheModdedChicken/YouTubeCherry/blob/main/dist/icon-24.png)
 
 A utility extension for YouTube.
 This project is currently a work-in-progress.
