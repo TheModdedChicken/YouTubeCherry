@@ -1,8 +1,8 @@
 import { browser } from "webextension-polyfill-ts";
-import { monitorElement } from "./utility";
+import { log, monitorElement } from "./utility";
 
 function init(buttonRenderer: Element) {
-  console.log("[YouTube Cherry]: Initializing video download button...")
+  log("Initializing video download button...")
 
   var downloadButton = document.createElement("ytd-button-renderer")
   downloadButton.className = "style-scope ytd-menu-renderer force-icon-button style-default size-default"
@@ -14,10 +14,12 @@ function init(buttonRenderer: Element) {
 
   buttonRenderer?.appendChild(downloadButton)
 
-  monitorElement(document, "ytcherry-downloadButton", addButtonContent)
+  monitorElement(document, "ytcherry-downloadButton", addButtonContext)
 }
 
-function addButtonContent(downloadButton: Element) {
+function addButtonContext(downloadButton: Element) {
+  log("Adding download button context...")
+
   // Button Text
   var container = document.createElement("a")
   container.className = "yt-simple-endpoint style-scope ytd-button-renderer"
